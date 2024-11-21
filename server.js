@@ -1,6 +1,6 @@
 import express from "express";
 import { configDotenv } from "dotenv";
-import connectDB from "./config/db.js";
+import adminRoutes from "./routes/admin.routes.js";
 import studentRoutes from "./routes/student.routes.js";
 import teacherRoutes from "./routes/teacher.routes.js";
 import classRoutes from "./routes/class.routes.js";
@@ -14,6 +14,7 @@ app.use(express.json());
 
 //Routes
 
+app.use("app/v1", adminRoutes);
 app.use("/app/v1/", studentRoutes);
 app.use("app/v1/", teacherRoutes);
 app.use("app/v1/", classRoutes);

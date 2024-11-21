@@ -11,4 +11,4 @@ const classSchema = new mongoose.Schema({
   createdAt: { type: Date, default: Date.now() },
 });
 
-export default teacherSchema = mongoose.model("teacherSchema", teacherSchema);
+export default classSchema = mongoose.model("classSchema", classSchema);
